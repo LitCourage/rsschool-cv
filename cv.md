@@ -58,6 +58,7 @@ function isAValidMessage(message){
 - [Shop](https://github.com/LitCourage/Shop) - educational project that simulates the work of an online marketplace
 - [Platformer](https://github.com/LitCourage/Platformer) - 2D platformer made in Python Pygame with use of OOP
 - [Pairs](https://github.com/LitCourage/Pairs) - simple browser game made using HTML/CSS and JS
+- [Flappy Bird](https://github.com/LitCourage/flappy-bird) - known to everybody game about a bird flying through green pipes
 
 ## Education
 
