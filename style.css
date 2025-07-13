@@ -8,7 +8,7 @@
     --border-color-highlight: #303943;
     --border-color-gap: #272727;
 
-    --font-color-header: #cfd3d5;
+    --font-color-header: #d7dcde;
     --font-color-code: #b9b9b9;
     --font-color-text: #b4b7b8;
     --font-color-link: #5cb0ff;
@@ -76,10 +76,10 @@ header {
     .initials {
         text-align: center;
         flex-grow: 1;
-        font-size: 4rem;
+        font-size: 5rem;
         letter-spacing: 6px;
-        color: #bdcdcd;
-        font-family: var(--font-family-header), sans-serif;
+        color: #b6d4e3;
+        font-family: Calibri, sans-serif;
     }
 }
 
@@ -93,7 +93,7 @@ header {
         border-right: 0;
         border-left: 0;
         text-align: center;
-        font-size: 24px;
+        font-size: 1.5rem;
 
         &:before {
             content: "";
@@ -108,9 +108,47 @@ header {
 
     .sidebar-list {
         padding: 0 20px;
+        font-size: 1.25rem;
 
         li {
-            margin: 10px 0;
+            margin: 20px 0;
+        }
+    }
+
+    .skills-grid {
+        display: grid;
+        grid: repeat(2, 1fr) / repeat(3, 1fr);
+        padding: 10px 0;
+        gap: 30px 0;
+
+        .skills-grid-item {
+            cursor: pointer;
+            position: relative;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 100%;
+
+            &:hover .skills-grid-item-description{
+                display: inline-block;
+            }
+
+            .skills-grid-item-description {
+                position: absolute;
+                top: calc(100% + 20px);
+                width: 200px;
+                z-index: 1;
+                text-align: center;
+                display: none;
+                background-color: #2d2d2d;
+                border-radius: 10px;
+                border: 2px solid var(--border-color-highlight);
+                padding: 10px;
+            }
         }
     }
 }
@@ -198,7 +236,7 @@ footer {
 .sidebar-text-font {
     color: var(--font-color-text);
     font-family: var(--font-family-text), sans-serif;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .inner-padding {
