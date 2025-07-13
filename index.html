@@ -2,11 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="wrapper text-font">
+        <header>
+            <img class="my-photo" src="assets/images/my-photo.png" alt="my-photo">
+            <h1 class="initials">Shubin Alexander</h1>
+        </header>
+        <aside class="sidebar sidebar-text-font">
+            <section class="contacts">
+                <h3 class="sidebar-header subheader-font">Contacts</h3>
+                <ul class="sidebar-list">
+                    <li>Email: dopdoyq@gmail.com</li>
+                    <li>Phone: +7 919 067-71-12</li>
+                </ul>
+            </section>
+            <section class="skills">
+                <h3 class="sidebar-header subheader-font">Skills</h3>
+                <div class="skills-grid">
+                    <div id="skill-javascript" class="skills-grid-item" style="background-image: url(&quot;https://cdn-icons-png.flaticon.com/128/5968/5968292.png&quot;);">
+                        <span class="skills-grid-item-description">Basics of JavaScript</span>
+                    </div>
+                    <div id="skill-HTML-CSS" class="skills-grid-item" style="background-image: url(&quot;https://cdn-icons-png.flaticon.com/128/1051/1051277.png&quot;);">
+                        <span class="skills-grid-item-description">HTML / CSS markup languages</span>
+                    </div>
+                    <div id="skill-vite" class="skills-grid-item" style="background-image: url(&quot;https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/vite.svg&quot;);">
+                        <span class="skills-grid-item-description">Vite module bundler</span>
+                    </div>
+                    <div id="skill-python" class="skills-grid-item" style="background-image: url(&quot;https://cdn-icons-png.flaticon.com/128/5968/5968350.png&quot;);">
+                        <span class="skills-grid-item-description">Python (object-oriented programming, Flask framework, telegram bots)</span>
+                    </div>
+                    <div id="skill-vscode-webstorm" class="skills-grid-item" style="background-image: url(&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1024px-Visual_Studio_Code_1.35_icon.svg.png&quot;);">
+                        <span class="skills-grid-item-description">Visual Studio Code, WebStorm</span>
+                    </div>
+                    <div id="skill-blender-UE" class="skills-grid-item" style="background-image: url(&quot;https://img.icons8.com/?size=100&id=KDGdN57NLSJa&format=png&color=000000&quot;);">
+                        <span class="skills-grid-item-description">Blender, Unreal Engine</span>
+                    </div>
+                </div>
+            </section>
+            <section class="education">
+                <h3 class="sidebar-header subheader-font">Education</h3>
+                <ul class="sidebar-list">
+                    <li>Finished 8th grade</li>
+                    <li>Python developer course by Skysmart school</li>
+                    <li>Frontend course by Skysmart school</li>
+                </ul>
+            </section>
+        </aside>
+        <main>
+            <section class="about-me">
+                <h3 class="main-header subheader-font">About me</h3>
+                <p class="main-text inner-padding">
+                    Recently I hit the 15th year of my life and among the wide range of opportunities, already available for me, I search for the best place to realize my possibilities. I am a fast learner and always eager to practise.
+                </p><br>
+                <p class="main-text inner-padding">
+                    Basics of some information technologies are already known to me. I have taken part in developing some small-scale projects in Python, tried myself in web development.
+                </p>
+            </section>
+            <section class="code-example">
+                <h3 class="main-header subheader-font">Code example</h3>
+                <pre class="code-box"><code>function isAValidMessage(message) {
+      if (message) {
+        message = message.split('').slice(1).reduce((acc, val) => {
+          const lastVal = '0123456789'.includes(acc[acc.length - 1][0])
+          const currentVal = '0123456789'.includes(val)
 
+          if ((!currentVal && lastVal) || (currentVal && !lastVal)) {acc[acc.length] = val}
+          else {acc[acc.length - 1] += val}
+
+          return acc;
+        }, [message[0]]);
+
+        if (message.length % 2 !== 0) {return false}
+        if (!'0123456789'.includes(message[0][0])) {return false}
+
+        console.log(message)
+
+        for (let i = 0; i $lt;= message.length / 2; i+=2) {
+          if (message[i] != message[i + 1].length) {
+            return false;
+          }
+        }
+      }
+
+      return true;
+    }</code></pre>
+            </section>
+            <section class="experience">
+                <h3 class="main-header subheader-font">Some of my projects</h3>
+                <ul class="main-text inner-padding">
+                    <li><a href="https://github.com/LitCourage/Shop" target="_blank">Shop</a> - educational project that simulates the work of an online marketplace</li>
+                    <li><a href="https://github.com/LitCourage/Platformer" target="_blank">Platformer</a> - 2D platformer made in Python Pygame with use of OOP</li>
+                    <li><a href="https://github.com/LitCourage/Pairs" target="_blank">Pairs</a> - simple browser game made using HTML/CSS and JS</li>
+                    <li><a href="https://github.com/LitCourage/flappy-bird" target="_blank">Flappy Bird</a> - known to everybody game about a bird flying through green pipes</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <a class="rs-school-link" target="_blank" href="https://rs.school/courses/javascript-ru"><img src="https://themrcrowley.github.io/rsschool-cv/assets/icons/rs_school_js.svg" alt="rs-school-logo" class="rs-school-logo"></a>
+            <div class="year-of-creation">2025</div>
+            <a class="github-link" target="_blank" href="https://github.com/LitCourage"><img src="https://themrcrowley.github.io/rsschool-cv/assets/icons/github.svg" alt="github-logo" class="github-logo"></a>
+        </footer>
+    </div>
 </body>
 </html>
